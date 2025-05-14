@@ -1,28 +1,22 @@
 import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
 
-export default function Index() {
-  const allPosts = getAllPosts();
+export const metadata = {
+  title: 'Lab-Ca.TechBlog',
+  description: '大阪のウェブサイト制作・CSS研究所「Lab-Ca.」の技術ブログです',
+}
 
-  const heroPost = allPosts[0];
+export default async function Index() {
+  const allPosts = await getAllPosts(); // ✅ 非同期で取得
 
-  const morePosts = allPosts.slice(1);
+  const morePosts = allPosts;
 
   return (
     <main>
       <Container>
         <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
     </main>

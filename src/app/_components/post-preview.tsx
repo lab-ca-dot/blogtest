@@ -3,6 +3,7 @@ import Link from "next/link";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
+import styles from "./PostPreview.module.scss" // ← 追加！
 
 type Props = {
   title: string;
@@ -22,20 +23,20 @@ export function PostPreview({
   slug,
 }: Props) {
   return (
-    <div>
-      <div className="mb-5">
+    <div className={styles.wrapper}>
+      <div className={styles.cover}>
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
+      <h3 className={styles.title}>
+        <Link href={`/posts/${slug}`} className={styles.link}>
           {title}
         </Link>
       </h3>
-      <div className="text-lg mb-4">
+      <div className={styles.date}>
         <DateFormatter dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+      <p className={styles.excerpt}>{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
     </div>
-  );
+  )
 }

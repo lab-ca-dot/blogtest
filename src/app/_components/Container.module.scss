@@ -1,0 +1,8 @@
+.container {
+  max-width: 1280px; /* Tailwindの "container" の上限 */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;  /* 20px = Tailwindの px-5 */
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}

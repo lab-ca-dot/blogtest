@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
+import { Intro } from "@/app/_components/intro";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Alert from "@/app/_components/alert";
 import Container from "@/app/_components/container";
@@ -23,6 +24,7 @@ export default async function Post(props: Params) {
     <main>
       <Alert preview={post.preview} />
       <Container>
+        <Intro />
         <Header />
         <article className="mb-32">
           <PostHeader
@@ -52,7 +54,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Lab-Ca.blog`;
 
   return {
     title,
@@ -64,8 +66,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
-
+  const posts = await getAllPosts(); // ← await を忘れていると map が undefined になります！
   return posts.map((post) => ({
     slug: post.slug,
   }));

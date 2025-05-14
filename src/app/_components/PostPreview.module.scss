@@ -1,0 +1,32 @@
+.wrapper {
+  /* 任意：余白・枠など必要なら追加可 */
+}
+
+.cover {
+  margin-bottom: 1.25rem; /* mb-5 */
+}
+
+.title {
+  font-size: 1.875rem; /* text-3xl */
+  margin-bottom: 0.75rem; /* mb-3 */
+  line-height: 1.375; /* leading-snug */
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 1.125rem; /* text-lg */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.excerpt {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.625;  /* leading-relaxed */
+  margin-bottom: 1rem; /* mb-4 */
+}

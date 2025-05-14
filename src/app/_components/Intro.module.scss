@@ -1,0 +1,48 @@
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+  }
+}
+
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  margin-right: 2rem;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+
+.subtitle {
+  text-align: left;
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+  padding-left: 2rem;
+  @media (max-width: 768px) {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+
+.link {
+  text-decoration: underline;
+  transition: color 0.2s;
+  @media screen and (hover) {
+    &:hover {
+      color: #2563eb; /* Tailwindのblue-600相当 */
+    }
+  }
+}
+
