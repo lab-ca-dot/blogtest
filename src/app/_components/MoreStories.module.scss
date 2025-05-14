@@ -1,0 +1,22 @@
+.heading {
+  margin-bottom: 2rem; /* mb-8 */
+  font-size: 2rem; /* text-5xl */
+  font-weight: bold;
+  letter-spacing: -0.05em; /* tracking-tighter */
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3rem; /* text-7xl */
+  }
+}
+
+.postGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 3rem;
+  @media (max-width: 768px) {
+  }
+}

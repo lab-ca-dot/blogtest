@@ -1,6 +1,4 @@
 import Container from "@/app/_components/container";
-import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
 
 export const metadata = {
@@ -10,14 +8,10 @@ export const metadata = {
 
 export default async function Index() {
   const allPosts = await getAllPosts(); // ✅ 非同期で取得
-
-  const morePosts = allPosts;
-
   return (
     <main>
       <Container>
-        <Intro />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {allPosts.length > 0 && <MoreStories posts={allPosts} />}
       </Container>
     </main>
   );

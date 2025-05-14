@@ -1,7 +1,7 @@
-import { Gugi, Noto_Sans_JP } from 'next/font/google'
+import { Audiowide, Noto_Sans_JP } from 'next/font/google'
 
-export const gugi = Gugi({
-  weight: '400',
+export const audiowide = Audiowide({
+  weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
 })
