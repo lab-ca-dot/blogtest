@@ -1,13 +1,11 @@
 'use client'
-import Head from 'next/head'
+import Script from 'next/script'
 import Container from "@/app/_components/container";
 
 export default function ContactForm() {
   return (
     <>
-      <Head>
-        <script src="https://www.google.com/recaptcha/api.js" async defer />
-      </Head>
+      <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
       <Container>
         <form
           action="https://ssgform.com/s/YxudAFlPwiMX"
