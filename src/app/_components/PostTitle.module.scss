@@ -1,0 +1,18 @@
+.title {
+  font-size: 4rem;          // lg:text-8xl
+  font-weight: bold;
+  letter-spacing: -0.05em;  // tracking-tighter
+  line-height: 1.25;        // leading-tight
+  margin-bottom: 3rem;      // mb-12
+  text-align: left;         // md:text-left をベースにする（PCファースト）
+
+  @media (max-width: 1024px) {
+    font-size: 3rem;      // md:text-7xl
+    line-height: 1;         // md:leading-none
+  }
+
+  @media (max-width: 767px) {
+    font-size: 2rem;        // text-5xl
+    //text-align: center;
+  }
+}

@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 2rem;      /* w-12 */
+  height: 2rem;     /* h-12 */
+  border-radius: 9999px; /* rounded-full */
+  margin-right: 1rem;    /* mr-4 */
+}
+
+.name {
+  font-size: 1rem; /* text-xl */
+  font-weight: bold;  /* font-bold */
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+}

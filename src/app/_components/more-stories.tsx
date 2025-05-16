@@ -8,7 +8,7 @@ type Props = {
 
 export function MoreStories({ posts }: Props) {
   return (
-    <section>
+    <section className={styles.wrap}>
       <h2 className={styles.heading}>記事一覧</h2>
       <div className={styles.postGrid}>
         {posts.map((post) => (

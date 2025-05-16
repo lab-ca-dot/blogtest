@@ -2,22 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding: 1rem 1rem;
+  gap: 1rem;
+  background: #191936;
+  border-bottom: solid 1px;
   @media (max-width: 768px) {
     flex-direction: column;
-    margin-bottom: 4rem;
   }
 }
 
-
 .title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: normal;
   letter-spacing: -0.05em;
   margin-right: 2rem;
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 1.75rem;
   }
 }
 .titleImg{
@@ -28,6 +28,9 @@
   margin-right: 0.5em;
   position: relative;
   top: -0.1em;
+  @media (max-width: 768px) {
+    width: 1.5em;
+  }
 }
 
 .subtitle {
@@ -36,6 +39,7 @@
   @media (max-width: 768px) {
     text-align: center;
     padding-left: 0;
+    font-size: 0.7rem;
   }
 }
 

@@ -1,16 +1,21 @@
+.wrap {
+  padding-block: 3rem;
+  @media (max-width: 768px) {
+  }
+}
+
+
 .heading {
   margin-bottom: 2rem; /* mb-8 */
-  font-size: 2rem; /* text-5xl */
+  font-size: 3rem; /* text-7xl */
   font-weight: bold;
   letter-spacing: -0.05em; /* tracking-tighter */
   line-height: 1.1;
-}
-
-@media (min-width: 768px) {
-  .heading {
-    font-size: 3rem; /* text-7xl */
+  @media (max-width: 768px) {
+    font-size: 2rem; /* text-5xl */
   }
 }
+
 
 .postGrid {
   display: flex;

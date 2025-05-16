@@ -8,22 +8,21 @@ export function Footer() {
       <Container>
         <div className={styles.wrapper}>
           <h3 className={styles.title}>
-            Statically Generated with Next.js.
+            このブログはNext.jsで作成しました。
           </h3>
           <div className={styles.actions}>
             <a
-              href="https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates"
+              href="https://lab-ca.com/" target='_blank'
               className={styles.button}
-            >
-              Read Documentation
-            </a>
+            >Lab-Ca.公式サイト</a>
             <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+              href='https://github.com/lab-ca-dot/nextjs-blog'
               className={styles.link}
             >
-              View on GitHub
+              このブログのGithubはこちら
             </a>
           </div>
+          <address className={styles.address}>&copy; Lab-Ca.</address>
         </div>
       </Container>
     </footer>

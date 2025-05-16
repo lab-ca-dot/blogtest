@@ -7,6 +7,8 @@ import Container from "@/app/_components/container";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import { MoreStories } from "@/app/_components/more-stories";
+import { SectionSeparator } from "@/app/_components/section-separator";
+import styles from './page.module.scss'
 
 export default async function Post(props: Params) {
   
@@ -24,7 +26,7 @@ export default async function Post(props: Params) {
   return (
     <main>
       <Container>
-        <article className="mb-32">
+        <article className={styles.article}>
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}
@@ -36,6 +38,7 @@ export default async function Post(props: Params) {
 
 
       </Container>
+      <SectionSeparator />
       <Container>
         {allPosts.length > 0 && <MoreStories posts={allPosts} />}
       </Container>

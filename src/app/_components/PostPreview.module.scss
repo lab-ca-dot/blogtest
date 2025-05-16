@@ -1,5 +1,11 @@
 .wrapper {
   width: calc((100% - 30px * 2) / 3);
+  @media (max-width: 1024px) {
+  width: calc((100% - 30px * 1) / 2);
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .cover {
@@ -15,6 +21,11 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 2lh;
+  @media (max-width: 768px) {
+    -webkit-line-clamp: 1;
+    height: 1lh;
+    font-size: 1.25rem;
+  }
 }
 
 .link {
@@ -28,6 +39,9 @@
 .date {
   font-size: 1.125rem; /* text-lg */
   margin-bottom: 1rem; /* mb-4 */
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .excerpt {

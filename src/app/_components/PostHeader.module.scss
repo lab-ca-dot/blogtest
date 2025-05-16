@@ -1,0 +1,40 @@
+.date {
+  margin-bottom: 1.5rem; // mb-6
+  font-size: 1.125rem;   // text-lg
+}
+
+.avatarDesktop {
+  display: block;
+  margin-bottom: 3rem; // md:mb-12
+
+  @media (max-width: 767px) {
+    display: none; // hidden on mobile
+  }
+}
+
+.cover {
+  margin-bottom: 4rem; // md:mb-16
+  
+  @media (max-width: 768px) {
+    margin-bottom: 2rem; // mb-8
+  }
+
+  @media (max-width: 639px) {
+    margin-left: 0;
+    margin-right: 0; // sm:mx-0
+  }
+}
+
+.avatarMobileWrapper {
+  max-width: 42rem; // max-w-2xl
+  margin: 0 auto;
+
+  .avatarMobile {
+    display: none;
+    margin-bottom: 1.5rem; // mb-6
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+}

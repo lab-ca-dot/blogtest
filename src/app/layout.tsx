@@ -13,9 +13,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja" suppressHydrationWarning>
       <body className={cn(notoSans.className)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Alert />
+          {/* <Alert /> */}
           <Header />
-          <div className="min-h-screen">
+          <div className="">
             {children}
           </div>
           <Footer />
