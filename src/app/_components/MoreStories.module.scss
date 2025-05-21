@@ -35,13 +35,15 @@
 
   li {
     cursor: pointer;
-    padding: 0.5rem 1rem;
     border: 1px solid #ccc;
+    a{
+      display: block;
+      padding: 0.5rem 1rem;
+    }
   }
 
   .active {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
+    background-color: #FFF;
+    color: #000;
   }
 }
