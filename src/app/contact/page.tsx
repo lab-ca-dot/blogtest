@@ -14,7 +14,7 @@ export default function ContactForm() {
           <input type="text" name="name" placeholder="お名前" required />
           <input type="email" name="email" placeholder="メールアドレス" required />
           <textarea name="message" placeholder="お問い合わせ内容" required />
-          <div className="g-recaptcha" data-sitekey="6LfyvjwrAAAAAEDQbowrLdY7cd1J-uATHDbZ9yAM" />
+          <div className="g-recaptcha" data-sitekey="6LdswzwrAAAAALxcBXJJ8P7EB1WQIEVmKEuY1P9g" />
           <button type="submit">送信</button>
         </form>
       </Container>
